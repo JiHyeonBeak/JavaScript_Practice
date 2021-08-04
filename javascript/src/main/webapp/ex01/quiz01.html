@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>퀴즈01</title>
+<style>
+	h1 {
+		color:#4c635f;
+	}
+
+	div {
+		width : 300px;
+		height: 300px;
+		margin: auto;
+		background-color: #a3c9ad;
+		border: solid 1px gray;
+	}
+	#box {
+		width : 250px;
+		height: 50px;
+		margin: auto;
+		position: relative;
+		top : 20px;
+		left: 20px;
+		border: none;
+		
+	}
+	#number1 {
+		position: relative;
+		left: 90px;
+		right: 120px;
+	
+	}
+
+
+</style>
+<script>
+
+	var count = 0; // 반복을 위한 count변수
+	var num1 = parseInt(Math.random()*100)+1; // 입력받은 값을 정수로 변환
+
+	function click123() {
+	
+		document.getElementById('out').innerHTML = '남은 횟수: '+(9-count);
+		
+		var num2 = document.getElementById('number').value;
+		document.getElementById('number1').innerHTML = num2;
+		num2 = parseInt(num2);
+		console.log(num1);
+		console.log(count);
+		
+		if(isNaN(num2) || num2 < 1 || num2 > 100 || num2 == ''){ // 입력 받은 수를 검열
+			document.getElementById('number1').innerHTML = '';
+			alert('유효 값이 아닙니다. (입력은 1 ~ 100 사이의 정수)');
+			return;
+		}
+		
+		while(count <= 10) { // 게임 횟수는 10번까지 반복 할 수 있다
+		
+		if(num1 > num2) {
+			alert('UP');
+			count ++;
+			break;
+		}
+		else if(num2 > num1) {
+			alert('DOWN');
+			count ++;
+			break;
+		}
+		else if(num2 == num1) {
+			alert('CORRECT');
+			count = 0;
+			document.getElementById('out').innerHTML = 'Clear!';
+			break;
+		}
+		
+		}
+		
+		if(count > 9) {
+			alert('GAME OVER');
+			count = 0;
+			
+		}
+	
+	}
+</script>
+
+
+</head>
+<body>
+	
+	<div>
+	<center><h1> Up & Down Game </h1></center>
+	<div id = 'box'>
+	<h2 id = 'number1'></h2>
+	<input type='text' id='number'>
+	<button id='cc' onclick='click123()'>입력</button>
+	<p id = 'out'></p>
+	</div>
+	</div>
+</body>
+</html>
