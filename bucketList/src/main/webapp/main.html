@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BUCKET LIST</title>
+<script src="js/script.js"></script>
+<style>
+	@font-face {
+		font-family: 'nanumson';
+		src : url('font/나눔손글씨 성실체.ttf');
+	}
+
+	div {
+	background-color: #f4f794;
+	width: 300px;
+	height:700px;
+	box-shadow: 2px 2px 2px;
+	}
+	
+	h1 {
+		font-family:'nanumson';
+		padding:20px 0 0 0;
+	}
+	button {
+		font-family:'nanumson';
+		font-size:20px;
+		background-color:#edd237;
+		border-radius: 5px;
+		width:50px;
+		height:30px;	
+	}
+	li {	
+		margin-top:10px;
+		font-family:'nanumson';
+		font-size:30px;
+		font-weight:50px;
+		text-align: left;
+	}
+	.done {
+		text-decoration: line-through;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<center><div>
+		<h1>Bucket List</h1>
+		<input id = "addtext" type="text">
+		<button id = 'ok' onclick = 'addlist()'>추가</button>
+		<ul id='list'  onclik='liclick()'>
+		</ul>
+	</div></center>
+</body>
+</html>
