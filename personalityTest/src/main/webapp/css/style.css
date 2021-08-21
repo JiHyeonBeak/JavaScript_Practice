@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@font-face {
+		font-family: 'nanumson';
+		src : url('../font/나눔손글씨 성실체.ttf');
+	}
+	* {
+		margin: 0;
+	}
+	#main {
+		width:100vw;
+		height:100vh;
+		background: linear-gradient(to top,#f5e6b0,#e6b919 20%);
+		background-repeat: none;
+	}
+	#info {
+		width: 600px;
+		height:650px;
+		background-color:#f2edda;
+		position:absolute;
+		top:50px;
+		left:500px;
+		border-radius: 5px;
+		box-shadow: 5px 5px 5px black;
+		animation-duration:3s;
+		animation-name:infoani;
+	}
+	h2 {
+		margin-top:10px;
+		font-family: 'nanumson';
+		font-size: 50px;
+		animation-duration:7s;
+		animation-name:appear;
+	}
+	p {
+		font-family: 'nanumson';
+		font-size: 30px;
+		margin-top: 20px;
+		animation-duration:7s;
+		animation-name:appear;
+	}
+	#stt {
+		background:url('../img/puppy.png');
+		background-repeat: no-repeat;
+		border:none;
+		position:absolute;
+		left:250px;
+		margin:0;
+		width:150px;
+		height:100px;
+		animation-name:appear;
+	}
+	#question{
+		line-height: 40px;
+	}
+	#choice {
+		width:500px;
+		display: inline;
+	}
+	.done {
+		display: none;
+	}
+	#fir:hover,#se:hover,#th:hover{
+		font-size: 35px;
+		color:gray;
+	}
+	#photo{
+		background-color: gray;
+		width:500px;
+		height:300px;
+		position: relative;
+		bottom:100px;
+	}
+	.dog1 {
+		background:url('../img/dog1.jpg');
+		background-size: 500px 300px;
+	}
+	.dog2 {
+		background:url('../img/dog2.jpg');
+		background-size: 500px 300px;
+	}
+	.dog3 {
+		background:url('../img/dog3.jpg');
+		background-size: 500px 300px;
+	}
+	
+	@keyframes appear {
+		from {opacity:0;}
+		to {opacity:1;}
+	}
+	@keyframes infoani{
+		from {opacity:0;}
+		to {opacity:1;}
+	}
+	@keyframes stt {
+		from {opacity:0;}
+		to {opacity:1;}
+	}

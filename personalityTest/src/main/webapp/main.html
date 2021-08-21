@@ -4,70 +4,7 @@
 <meta charset="UTF-8">
 <title>당신과 어울리는 강아지는?</title>
 <script src='js/script.js'></script>
-<style>
-	@font-face {
-		font-family: 'nanumson';
-		src : url('font/나눔손글씨 성실체.ttf');
-	}
-	* {
-		margin: 0;
-	}
-	#main {
-		width:100vw;
-		height:100vh;
-		background: linear-gradient(to top,#f5e6b0,#e6b919 20%);
-		background-repeat: none;
-	}
-	#info {
-		width: 600px;
-		height:650px;
-		background-color:#f2edda;
-		position:absolute;
-		top:50px;
-		left:500px;
-		border-radius: 5px;
-		box-shadow: 5px 5px 5px black;
-		animation-duration:3s;
-		animation-name:infoani;
-	}
-	h2 {
-		margin-top:10px;
-		font-family: 'nanumson';
-		font-size: 50px;
-		animation-duration:7s;
-		animation-name:appear;
-	}
-	p {
-		font-family: 'nanumson';
-		font-size: 30px;
-		margin-top: 20px;
-		animation-duration:7s;
-		animation-name:appear;
-	}
-	#stt {
-		background:url('img/puppy.png');
-		background-repeat: no-repeat;
-		border:none;
-		position:absolute;
-		left:250px;
-		margin:0;
-		width:150px;
-		height:100px;
-		animation-name:appear;
-	}
-	@keyframes appear {
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-	@keyframes infoani{
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-	@keyframes stt {
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-</style>
+<link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
 
@@ -75,7 +12,7 @@
 		<center><div id='info'>
 			<h2> 당신에게 어울리는 강아지는?</h2>
 			<br><br><br>
-			<button id='stt' onclick='sttt()'></button>
+			<button id='stt' onclick="sttt()"></button>
 			<br><br><br><br>
 			<p>여기는 강아지 왕국<br><br>
 			당신과 어울리는 동물을 찾으러 왔어요!<br><br>

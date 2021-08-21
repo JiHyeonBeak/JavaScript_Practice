@@ -3,85 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>당신과 어울리는 강아지는?</title>
-<style>
-@font-face {
-		font-family: 'nanumson';
-		src : url('font/나눔손글씨 성실체.ttf');
-	}
-	* {
-		margin: 0;
-	}
-	#main {
-		width:100vw;
-		height:100vh;
-		background: linear-gradient(to top,#f5e6b0,#e6b919 20%);
-		background-repeat: none;
-	}
-	#info {
-		width: 600px;
-		height:650px;
-		background-color:#f2edda;
-		position:absolute;
-		top:50px;
-		left:500px;
-		border-radius: 5px;
-		box-shadow: 5px 5px 5px black;
-		animation-duration:3s;
-		animation-name:infoani;
-	}
-	h2 {
-		margin-top:10px;
-		font-family: 'nanumson';
-		font-size: 50px;
-		animation-duration:7s;
-		animation-name:appear;
-	}
-	p {
-		font-family: 'nanumson';
-		font-size: 30px;
-		margin-top: 20px;
-		animation-duration:7s;
-		animation-name:appear;
-	}
-	#stt {
-		background:url('img/puppy.png');
-		background-repeat: no-repeat;
-		border:none;
-		position:absolute;
-		left:250px;
-		margin:0;
-		width:150px;
-		height:100px;
-		animation-name:appear;
-	}
-	@keyframes appear {
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-	@keyframes infoani{
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-	@keyframes stt {
-		from {opacity:0;}
-		to {opacity:1;}
-	}
-	.done {
-		display:none;
-	}
-
-</style>
+<script src='js/script.js'></script>
+<link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
 	<div id='main'>
 		<center><div id='info'>
 			<h2> 당신에게 어울리는 강아지는?</h2>
 			<br><br><br>
-			<button id='stt' onclick='location.href=test.html'></button>
-			<br><br><br><br>
 			<p id='question'>
-			슈나우저, 보더콜리, 풍산개...다양한 강아지들이 뛰어노네요.<br><br>
-			과연 당신과 인연이 될 강아지는 누구일까요?</p>
+			광장에 많은 강아지들이 모여있어요!<br>노래자랑을 하려나봐요.<br>MC강아지가 당신에게 마이크를 건네는군요.<br>당신의 반응은?
+			</p>
+			<br><br>
+			<div id='choice'>
+			<p id='fir' onclick='first()'>같이 노래한다!</p>
+			<p id='se' onclick='second()'>부끄러워 하면서 뒤로 빠진다</p>
+			<p id='th' onclick='third()'>도망간다</p>
+			</div>
 		</div></center>
 	</div>
 </body>
